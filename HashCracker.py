@@ -42,9 +42,9 @@ def main():
     parser.add_argument("-t", "--Type", dest="Type", help="The type of hash you would like.",
                         choices=["md5", "sha1", "ripe160md", "sha256", "sha512", "NTLM"], required=True)
     parser.add_argument("-d", "--Dict", dest="Dict", help="The word list you will be using.", required=True)
-    parser.add_argument("-sp", "--Prefix", dest="Prefix", help="The salt prefix to append.", default='')
+    parser.add_argument("-sp", "--Prefix", dest="Prefix", help="The salt prefix to prepend.", default='')
     parser.add_argument("-hv", "--Hash", dest="Hash", help="The hash value to crack.", required=True)
-    parser.add_argument("-ss", "--Suffix", dest="Suffix", help="The salt suffix to prepend.", default='')
+    parser.add_argument("-ss", "--Suffix", dest="Suffix", help="The salt suffix to append.", default='')
     args = parser.parse_args()
 
     f = open(args.Dict, 'r', encoding='utf-8')
@@ -55,27 +55,34 @@ def main():
             crackAttempt = md5(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
+                exit(1)
+
         elif args.Type=="sha1":
             crackAttempt = sha1(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
+                exit(1)
         elif args.Type=="ripe160md":
             crackAttempt = ripe160md(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
+                exit(1)
 
         elif args.Type=="sha256":
             crackAttempt = sha256(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
+                exit(1)
         elif args.Type=="sha512":
             crackAttempt = sha512(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
+                exit(1)
         elif args.Type=="NTLM":
             crackAttempt = NTLM(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
+                exit(1)
 
 
 if __name__ =="__main__":
