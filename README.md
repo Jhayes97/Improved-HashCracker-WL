@@ -5,15 +5,17 @@ Supports md5, sha1, ripe160md, sha256, sha512, NTLM, known salts, command line a
 # Syntax 
 
 
-required arguments:
+### required arguments:
 
 -t {md5,sha1,ripe160md,sha256,sha512,NTLM}, --Type {md5,sha1,ripe160md,sha256,sha512,NTLM}
                         The type of hash you would like.
+
 -d <DICT>, --Dict <DICT>  The word list you will be using.
 
 -hv <HASH>, --Hash <HASH>
                         The hash value to crack.
-optional arguments:
+
+### optional arguments:
   -h, --help            show this help message and exit
   
   
