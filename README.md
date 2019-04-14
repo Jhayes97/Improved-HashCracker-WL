@@ -42,6 +42,6 @@ The password was: Password1
 
 $ 
 
-***NOTE THAT THE DEFAULT ENCODING FOR rockyou.txt IS `latin-1`, IF YOU WANT TO USE rockyou.TXT THEN CHANGE `UTF-8` ON LINE 50 TO `latin-1`***
+***NOTE THAT THE DEFAULT ENCODING FOR rockyou.txt IS `latin-1`, IF YOU WANT TO USE rockyou.txt THEN CHANGE `UTF-8` ON LINE 50 TO `latin-1`***
 
 Made by James Hayes
