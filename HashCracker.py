@@ -55,34 +55,34 @@ def main():
             crackAttempt = md5(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
-                exit(1)
+                exit(0)
 
         elif args.Type=="sha1":
             crackAttempt = sha1(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
-                exit(1)
+                exit(0)
         elif args.Type=="ripe160md":
             crackAttempt = ripe160md(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
-                exit(1)
+                exit(0)
 
         elif args.Type=="sha256":
             crackAttempt = sha256(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
-                exit(1)
+                exit(0)
         elif args.Type=="sha512":
             crackAttempt = sha512(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
-                exit(1)
+                exit(0)
         elif args.Type=="NTLM":
             crackAttempt = NTLM(saltedString)
             if crackAttempt.lower() == args.Hash.lower():
                 print("The password was: {}".format(line))
-                exit(1)
+                exit(0)
 
 
 if __name__ =="__main__":
